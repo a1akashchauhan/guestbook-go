@@ -1,4 +1,7 @@
-name: Build and Push Docker Image
+- name: Build and push Docker image
+  run: |
+    docker build -t your-dockerhub-username/guestbook-go:latest .
+    docker push your-dockerhub-username/guestbook-go:latest --all-tags
 
 on:
   push:
